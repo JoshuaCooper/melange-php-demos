@@ -66,8 +66,8 @@ With the APK packages and APK index in place, you can now build a container imag
 
 ```shell
 docker run --rm --workdir /work -v ${PWD}:/work cgr.dev/chainguard/apko \
-  build apko.yaml hello-minicli:test hello-minicli.tar \
-  --arch host
+build apko.yaml hello-minicli:test hello-minicli.tar \
+--arch host
 ```
 
 This will build an OCI image based on your host system's architecture - most likely this will be `x86_64`.
