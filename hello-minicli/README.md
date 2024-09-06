@@ -37,7 +37,7 @@ This will generate a `melange.rsa` and `melange.rsa.pub` files in the current di
 Next, build the APK defined in the `melange.yaml` file:
 
 ```shell
-docker run --privileged --rm -v "${PWD}":/work \
+docker run --privileged --rm --volume "${PWD}":/work \
 cgr.dev/chainguard/melange build melange.yaml \
 --arch amd64,aarch64 \
 --signing-key melange.rsa
